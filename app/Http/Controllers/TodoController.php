@@ -33,7 +33,12 @@ class TodoController extends Controller{
         //
     }
     public function update(Request $request, Todo $todo){
-        //
+        if($todo->completed == true){
+            $todo->update(['completed' => false]);
+        }else{
+            $todo->update(['completed' => true]);
+            return ("Added via " . env('BACKEND_SERVER'));
+        }
     }
     public function destroy(Todo $todo){
         //
