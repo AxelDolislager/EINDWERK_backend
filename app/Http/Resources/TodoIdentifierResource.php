@@ -19,7 +19,7 @@ class TodoIdentifierResource extends JsonResource
             'type'          => 'todos',
             'id'            => (string)$this->id,
             'attributes'    => [
-                'body'          => $this->body,
+                'title'          => $this->title,
                 'completed'     => $this->completed,
                 'created_at'    => $this->created_at,
                 'updated_at'    => $this->updated_at,

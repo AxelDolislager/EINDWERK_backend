@@ -19,7 +19,7 @@ class TodoResource extends JsonResource{
             'id'        => (string)$this->id,
             'project_id' => (string)$this->project_id,
             'attributes' => [
-                'title'          => $this->body,
+                'title'          => $this->title,
                 'completed'     => $this->completed,
                 'created_at'    => $this->created_at,
                 'updated_at'    => $this->updated_at,
