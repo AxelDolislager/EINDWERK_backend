@@ -17,7 +17,12 @@ class TodoController extends Controller{
         //
     }
     public function store(Request $request){
-        //
+        $todo = new Todo;
+        $todo->project_id = $request->project_id;
+        $todo->title = $request->title;
+        $todo->save();
+        
+        return ("Added via " . env('BACKEND_SERVER'));
     }
     public function show(Todo $todo){
         TodoResource::withoutWrapping();
