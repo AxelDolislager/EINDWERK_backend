@@ -20,7 +20,8 @@ class ProjectResource extends JsonResource
             'id'    => (string)$this->id,
             'attributes'    => [
                 'title' => $this->title,
-                'body'  => $this->body,
+                'created_at'    => $this->created_at,
+                'updated_at'    => $this->updated_at,
             ],
             'relationships' => new ProjectRelationshipResource($this),
             'links'         => [

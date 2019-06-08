@@ -14,11 +14,15 @@ class TodoResource extends JsonResource{
      */
     public function toArray($request){
         return [
-            'type'          => 'todos',
-            'id'            => (string)$this->id,
+            'server'    => env('BACKEND_SERVER'),
+            'type'      => 'todos',
+            'id'        => (string)$this->id,
+            'project_id' => (string)$this->project_id,
             'attributes' => [
-                'body' => $this->body,
-                'completed' => $this->completed,
+                'title'          => $this->body,
+                'completed'     => $this->completed,
+                'created_at'    => $this->created_at,
+                'updated_at'    => $this->updated_at,
             ],
             'relationships' => new TodoRelationshipResource($this),
             'links'      => [

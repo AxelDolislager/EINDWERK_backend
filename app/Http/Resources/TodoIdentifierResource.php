@@ -18,6 +18,12 @@ class TodoIdentifierResource extends JsonResource
         return [
             'type'          => 'todos',
             'id'            => (string)$this->id,
+            'attributes'    => [
+                'body'          => $this->body,
+                'completed'     => $this->completed,
+                'created_at'    => $this->created_at,
+                'updated_at'    => $this->updated_at,
+            ],
         ];
     }
 }
