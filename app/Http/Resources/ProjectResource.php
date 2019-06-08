@@ -20,6 +20,7 @@ class ProjectResource extends JsonResource
             'id'    => (string)$this->id,
             'attributes'    => [
                 'title' => $this->title,
+                'color' => $this->color,
                 'total_todos' => count($this->todos),
                 'completed_todos' => count($this->todos->where('completed', 1)),
                 'created_at'    => $this->created_at,

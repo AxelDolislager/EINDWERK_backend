@@ -17,7 +17,12 @@ class ProjectController extends Controller{
         //
     }
     public function store(Request $request){
-        //
+        $project = new Project;
+        $project->title = $request->title;
+        $project->color = $request->color;
+        $project->save();
+        
+        return ("Added via " . env('BACKEND_SERVER'));
     }
     public function show(Project $project){
         ProjectResource::withoutWrapping();
