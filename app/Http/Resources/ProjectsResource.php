@@ -15,6 +15,7 @@ class ProjectsResource extends ResourceCollection {
     public function toArray($request) {
         // return parent::toArray($request);
         return [
+            'server' => env('BACKEND_SERVER'),
             'data' => ProjectResource::collection($this->collection),
         ];
     }

@@ -14,8 +14,8 @@ class TodoResource extends JsonResource{
      */
     public function toArray($request){
         return [
-            'server'    => env('BACKEND_SERVER'),
-            'type'      => 'todos',
+            'server' => env('BACKEND_SERVER'),
+            'type'      => 'todo',
             'id'        => (string)$this->id,
             'project_id' => (string)$this->project_id,
             'attributes' => [

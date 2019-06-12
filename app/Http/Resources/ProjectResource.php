@@ -15,8 +15,8 @@ class ProjectResource extends JsonResource
     public function toArray($request) {
         // return parent::toArray($request);
         return [
-            'server'    => env('BACKEND_SERVER'),
-            'type'  => 'projects',
+            'server' => env('BACKEND_SERVER'),
+            'type'  => 'project',
             'id'    => (string)$this->id,
             'attributes'    => [
                 'title' => $this->title,

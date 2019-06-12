@@ -15,6 +15,7 @@ class TodosResource extends ResourceCollection{
      */
     public function toArray($request){
         return [
+            'server' => env('BACKEND_SERVER'),
             'data' => TodoResource::collection($this->collection),
         ];
     }
